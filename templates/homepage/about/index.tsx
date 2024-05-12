@@ -10,7 +10,8 @@ const About = () => {
       <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         <video
           className="rounded-2xl object-cover w-full h-full md:col-span-2 md:row-span-3"
-          src={require("../../../public/video/saphir-video-roaming.mp4")}
+          // src={require("../../../public/video/saphir-video-roaming.mp4")}
+          src="/video/saphir-video-roaming.mp4"
           autoPlay
           muted
           loop
