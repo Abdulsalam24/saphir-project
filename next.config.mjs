@@ -1,4 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+// next.config.mjs
+import withVideos from 'next-videos';
 
-export default nextConfig;
+export default withVideos({
+    reactStrictMode: true,
+});

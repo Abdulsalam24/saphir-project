@@ -2,32 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: spaceGrotesk;
+  src: url("../assets/fonts/static/SpaceGrotesk-Regular.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  font-family: spaceGrotesk;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #182925;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h2 {
+  @apply text-[32px];
+}
+
+img {
+  @apply max-w-full block;
+}
+
+input {
+  @apply outline outline-none text-white;
+}
+
+.btn {
+  @apply bg-[#ffffff4d] border border-[0.5] border-[#d0d0d0] p-3 text-[#fff] text-base;
+}
+
+input {
+  @apply p-3 border border-[0.5] border-[#d0d0d0] placeholder:text-[#fff] bg-transparent;
+}
+
+.heroBackground {
+  background-image: url("../assets/svgs/icons/saphir-bg.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.navList li {
+  @apply font-bold cursor-pointer;
 }
